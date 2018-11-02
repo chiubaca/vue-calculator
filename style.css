@@ -1,0 +1,74 @@
+#vue-calculator{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    width:40%;
+    border-radius: 15px;
+    background-color: rgb(193, 225, 204);
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+        "disp disp disp disp"
+        "nums nums nums func"
+        "nums nums nums func";
+  /* center the whole calculator */
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#vue-calculator button{
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 15px;
+}
+
+#display-unit{
+    text-align: right;
+    font-size: 2rem;
+    margin: 0  0 15px 0 ;
+    display: grid;
+    background-color: #7aac83 ;
+    border-radius: 15px;
+    grid-area: disp;
+}
+
+#display-unit p {
+    margin: 30px 10px 0 0  
+}
+
+#number-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: nums;
+}
+
+#zero {grid-column: span 2 / auto;}
+
+
+
+#functions-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-area: func;
+}
+
+#functions-grid button{
+    background-color: #1ba132;
+}
+
+#functions-grid button:hover{
+    background-color: #148627
+}
+
+#number-grid button{
+    background-color: #79be85;
+}
+
+#number-grid button:hover{
+    background-color: #50995c
+}
+
+
