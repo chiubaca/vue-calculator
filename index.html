@@ -14,17 +14,17 @@
     <title>Vue Calculator</title>
     <div id="vue-calculator">
         <div id="display-unit">
-            <p>{{output}}</p> 
+            <p>{{display}}</p> 
         </div>
         <div id="number-grid">
-            <div class="button" id="seven"><p>7</p> </div> <div class="button" id="eight"><p>8</p></div> <div class="button" id="nine"><p>9</p></div>
-            <div class="button" id="four"> <p>4</p></div>  <div class="button" id="five"><p>5</p></div>  <div class="button" id="six"><p>6</p></div>
-            <div class="button" id="one"><p>1</p></div>   <div class="button" id="two"><p>2</p></div>   <div class="button" id="three"><p>3</p></div>
-            <div class="button" id="zero"><p>0</p></div>  <div class="button" id="dot"><p>.</p></div>
+            <div v-on:click="numberInput('7')" class="button" id="seven"><p>7</p> </div><div v-on:click="numberInput('8')" class="button" id="eight"><p>8</p></div> <div v-on:click="numberInput('9')" class="button" id="nine"><p>9</p></div>
+            <div v-on:click="numberInput('4')" class="button" id="four"> <p>4</p></div> <div v-on:click="numberInput('5')" class="button" id="five"><p>5</p></div>  <div v-on:click="numberInput('6')" class="button" id="six"><p>6</p></div>
+            <div v-on:click="numberInput('1')" class="button" id="one"><p>1</p></div>   <div v-on:click="numberInput('2')" class="button" id="two"><p>2</p></div>   <div v-on:click="numberInput('3')" class="button" id="three"><p>3</p></div>
+            <div v-on:click="numberInput('0')" class="button" id="zero"><p>0</p></div>  <div v-on:click="numberInput('.')" class="button" id="dot"><p>.</p></div>
         </div>
         <div id="functions-grid">
-            <div class="button" id="CE">CE</div>  <div class="button" id="divide">÷</div> <div class="button" id="multiply">×</div>
-            <div class="button" id="plus">+</div> <div class="button" id="minus">-</div>  <div class="button" id="equals">=</div>
+            <div class="button" id="CE">CE</div>                                   <div v-on:click="setOperator('/')" class="button" id="divide">÷</div> <div v-on:click="setOperator('*')" class="button" id="multiply">×</div>
+            <div v-on:click="setOperator('+')" class="button" id="plus">+</div> <div  v-on:click="setOperator('-')" class="button" id="minus">-</div>  <div class="button" id="equals">=</div>
         </div>
     </div>
 
