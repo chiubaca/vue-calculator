@@ -50,10 +50,23 @@ new Vue({
                     this.display =  Number(this.calculation.valueA) + Number(this.calculation.valueB);
                     this.calculation.valueA = this.display;
                     this.clearAndKeepValueA();
+                    break;
                 case "-":
                     this.display =  Number(this.calculation.valueA) - Number(this.calculation.valueB);
                     this.calculation.valueA = this.display;
                     this.clearAndKeepValueA();
+                    break;
+                case "/":
+                    this.display =  Number(this.calculation.valueA) / Number(this.calculation.valueB);
+                    this.calculation.valueA = this.display;
+                    this.clearAndKeepValueA();
+                    break;
+                case "*":
+                    this.display =  Number(this.calculation.valueA) * Number(this.calculation.valueB);
+                    this.calculation.valueA = this.display;
+                    this.clearAndKeepValueA();
+                    break;
+                
             }
         }
 
