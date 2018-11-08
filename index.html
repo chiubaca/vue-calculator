@@ -23,8 +23,8 @@
             <div v-on:click="numberInput('0')" class="button" id="zero"><p>0</p></div>  <div v-on:click="numberInput('.')" class="button" id="dot"><p>.</p></div>
         </div>
         <div id="functions-grid">
-            <div class="button" id="CE">CE</div>                                   <div v-on:click="setOperator('/')" class="button" id="divide">÷</div> <div v-on:click="setOperator('*')" class="button" id="multiply">×</div>
-            <div v-on:click="setOperator('+')" class="button" id="plus">+</div> <div  v-on:click="setOperator('-')" class="button" id="minus">-</div>  <div class="button" id="equals">=</div>
+            <div v-on:click="clearAll" class="button" id="CE">CE</div>          <div v-on:click="setOperator('/')" class="button" id="divide">÷</div> <div v-on:click="setOperator('*')" class="button" id="multiply">×</div>
+            <div v-on:click="setOperator('+')" class="button" id="plus">+</div> <div v-on:click="setOperator('-')" class="button" id="minus">-</div>  <div v-on:click="equate" class="button" id="equals">=</div>
         </div>
     </div>
 
