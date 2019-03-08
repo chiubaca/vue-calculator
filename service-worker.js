@@ -3,7 +3,7 @@ const filesToCache = [
     '/style.css',
     '/app.js',
     '/index.html',
-    'https://unpkg.com/vue@2.6.8/dist/vue.js'
+    '/vue.js'
 ]
 
 const staticCacheName = 'cache-v1'
