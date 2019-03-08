@@ -3,10 +3,11 @@ const filesToCache = [
     '/style.css',
     '/app.js',
     '/index.html',
-    '/vue.js'
+    '/vue.js',
+    '/offline.html'
 ]
-
-const staticCacheName = 'cache-v1'
+const offlineURL= 'offline.html';
+const staticCacheName = 'cache-v3'
 
 // listen for install event
 // the install event is a good time to be caching assets
@@ -30,10 +31,21 @@ self.addEventListener('install', function(event){
 })
 
 // listen for activate event
-// the activate event is a good time to clean outdated caches
 self.addEventListener('activate', function(event){
-    //perform some task
-    console.log("SW activated!" , event)
+    //Clean old app cache if there is one
+    console.log("activating new service worker" , event)
+    const cacheWhiteList = [staticCacheName];
+
+    event.waitUntil(
+        caches.keys().then(function(cacheNames){
+            cacheNames.map(function(cacheName){
+                if(cacheWhiteList.indexOf(cacheName) === -1){
+                    return caches.delete(cacheName);
+                }
+            })
+        })
+    )
+
 })
 
 //intercept network requests
@@ -53,6 +65,8 @@ self.addEventListener('fetch', function(event){
         })
         .catch(function(error){
             //TODO: respond with offline pages
+            console.log("Error, " , error)
+            return caches.match(offlineURL);
         })
     )
 })
