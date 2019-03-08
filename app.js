@@ -1,3 +1,15 @@
+// Service Worker installation...
+if ('serviceWorker' in navigator){
+    navigator.serviceWorker.register('service-worker.js')
+    .then(function(registration){
+        console.log("registration of SW successful, the scope is: " , registration.scope);
+    })
+    .catch(function(error){
+        console.log("registration of SW failed, error: " , error)
+    })
+}
+
+//Main app logic
 new Vue({
     el: "#vue-calculator",
     data: {
@@ -68,6 +80,9 @@ new Vue({
                     break;
                 
             }
+        },
+        key: function(event) {
+            console.log(` you clicked key  ${event.key} (${event.keyCode}) `)
         }
 
         

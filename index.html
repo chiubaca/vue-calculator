@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
-    <script src="../vue.js"></script>
+    <script src="/vue.js" ></script>
 </head>
 
 <body>
     <title>Vue Calculator</title>
     <div id="vue-calculator">
-        <div id="display-unit">
+        <div id="display-unit" v-on:keydown="key">
             <p>{{display}}</p> 
         </div>
-        <div id="number-grid">
+        <div id="number-grid" >
             <div v-on:click="numberInput('7')" class="button" id="seven"><p>7</p> </div><div v-on:click="numberInput('8')" class="button" id="eight"><p>8</p></div> <div v-on:click="numberInput('9')" class="button" id="nine"><p>9</p></div>
             <div v-on:click="numberInput('4')" class="button" id="four"> <p>4</p></div> <div v-on:click="numberInput('5')" class="button" id="five"><p>5</p></div>  <div v-on:click="numberInput('6')" class="button" id="six"><p>6</p></div>
             <div v-on:click="numberInput('1')" class="button" id="one"><p>1</p></div>   <div v-on:click="numberInput('2')" class="button" id="two"><p>2</p></div>   <div v-on:click="numberInput('3')" class="button" id="three"><p>3</p></div>
