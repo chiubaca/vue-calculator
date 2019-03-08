@@ -38,6 +38,7 @@ div#CE.button {
 }
 
 #display-unit{
+    overflow:hidden;
     text-align: right;
     font-size: 2rem;
     margin: 0  0 15px 0 ;
