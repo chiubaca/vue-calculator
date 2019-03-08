@@ -4,7 +4,8 @@ const filesToCache = [
     '/app.js',
     '/index.html',
     '/vue.js',
-    '/offline.html'
+    '/offline.html',
+    '/images/numbers.png'
 ]
 const offlineURL= 'offline.html';
 const staticCacheName = 'cache-v3'

@@ -1,0 +1,16 @@
+{
+  "short_name": "Calculator",
+  "name": "Simple Vue Calculator",
+  "icons": [
+    {
+      "src": "/images/numbers.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
+}
